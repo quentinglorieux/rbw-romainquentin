@@ -8,8 +8,8 @@
 <channel>
 	<title>
 	Comments on: Hello world!	</title>
-	<atom:link href="/2022/09/11/hello-world/feed/" rel="self" type="application/rss+xml" />
-	<link>/2022/09/11/hello-world/</link>
+	<atom:link href="https://www.romainquentin.fr/2022/09/11/hello-world/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.romainquentin.fr/2022/09/11/hello-world/</link>
 	<description>Memory, Error and Learning (MEL) group</description>
 	<lastBuildDate>Sun, 11 Sep 2022 13:36:08 +0000</lastBuildDate>
 	<sy:updatePeriod>
