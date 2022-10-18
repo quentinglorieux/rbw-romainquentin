@@ -8,8 +8,8 @@
 <channel>
 	<title>
 	Comments for Romain Quentin	</title>
-	<atom:link href="/comments/feed/" rel="self" type="application/rss+xml" />
-	<link></link>
+	<atom:link href="https://www.romainquentin.fr/comments/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.romainquentin.fr</link>
 	<description>Memory, Error and Learning (MEL) group</description>
 	<lastBuildDate>Tue, 18 Oct 2022 16:28:37 +0000</lastBuildDate>
 	<sy:updatePeriod>
