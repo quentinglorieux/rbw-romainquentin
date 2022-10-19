@@ -3,19 +3,25 @@ function insert_publication(member_id){
   jQuery('.bn').hide();
   var advance=0
   var total=0;
-  jQuery(':checkbox').each(function() {
+  jQuery('#myTable :checkbox').each(function() {
     if(this.checked){
+      id=this.id;
       total++;
+      
     }
+   
   }
+  
   );
+  
 
-  jQuery(':checkbox').each(function() {
+  jQuery('#myTable :checkbox').each(function() {
     if(this.checked){
       id=this.id;
       const data= new Object();
 
       list_of_entry.forEach(function(element){
+        // console.log(element+id);
 
         data[element]= document.getElementById(element+id).textContent;
 
