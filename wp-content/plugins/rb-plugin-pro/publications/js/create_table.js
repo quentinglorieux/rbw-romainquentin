@@ -30,15 +30,31 @@ function insert_first_line(){
 }
 
 function insert_table_line(Data_list,id){
-
+  // find the index of the  row with the good year. 
+  var year =Data_list[2];
   var tbodyRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+  var x=tbodyRef.getElementsByTagName('tr')
+  i=0
+  if (x[0]!=undefined){
+    i=0
+    table_year=Number(x[i].getElementsByTagName('td')[3].innerText)
+    while (i< x.length && year<table_year ){
+      i++;
+      if (i< x.length){
+        table_year=Number(x[i].getElementsByTagName('td')[3].innerText)
+      }  
+    }
+
+  }
 
     // Insert the cells  in the row with parsing value in the list of entry
     // Data_list is the list of parsed value.
     // it has to be ordered with the same order as the list_of_entry.
 
   // Insert the checkbox
-  var newRow = tbodyRef.insertRow();
+  var year =Data_list[2];
+  
+  var newRow = tbodyRef.insertRow(i);
   var newCell = newRow.insertCell();
   var check = document.createElement("input");
   check.setAttribute("type", "checkbox");
@@ -50,6 +66,7 @@ function insert_table_line(Data_list,id){
   i=0
 
   Data_list.forEach(item => {
+    
     if (typeof(item)=='undefined'){
       // console.log(item);
       item='';
