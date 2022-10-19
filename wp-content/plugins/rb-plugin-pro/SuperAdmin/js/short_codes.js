@@ -31,7 +31,7 @@ jQuery( document ).ready( function($) {
                     item.style.position="relative";
             }else{
                 item.style.display="none";
-                item.style.position="absolute";
+                // item.style.position="";
             }
         }
         
