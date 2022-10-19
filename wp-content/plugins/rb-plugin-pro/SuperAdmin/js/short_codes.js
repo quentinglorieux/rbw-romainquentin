@@ -1,7 +1,9 @@
 jQuery( document ).ready( function($) {
     // $(".member").css('position','absolute');
 
-    console.log($('.member-name').text());
+    // console.log($('.member-name').text());
+    
+    // console.log(document.getElementById('rbw_search_input'));
     function search(inp) {
 
       /*the autocomplete function takes two arguments,
@@ -18,16 +20,25 @@ jQuery( document ).ready( function($) {
           val=list[list.length-1];
           val=val.trim();
            }
-           val=val.trim();
+           val=val.trim().toLowerCase();
            
-
-
-        });
+        var list = document.getElementsByClassName("member");
+        for (let item of list) {
+            member_name=item.getElementsByClassName("member-name")[0].textContent.trim().toLowerCase();
+            
+            if(member_name.includes(val) ){
+                    item.style.display="block";
+                    item.style.position="relative";
+            }else{
+                item.style.display="none";
+                item.style.position="absolute";
+            }
+        }
+        
+    });
     
     };
-    
 
-
-    search(document.getElementById('search_input'));
+    // search(document.getElementById('rbw_search_input'));
 });
     
