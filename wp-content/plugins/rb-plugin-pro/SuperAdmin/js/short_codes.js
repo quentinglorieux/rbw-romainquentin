@@ -25,8 +25,9 @@ jQuery( document ).ready( function($) {
         var list = document.getElementsByClassName("member");
         for (let item of list) {
             member_name=item.getElementsByClassName("member-name")[0].textContent.trim().toLowerCase();
-            
-            if(member_name.includes(val) ){
+            status_name=item.getElementsByClassName("rb-status-name")[0].textContent.trim().toLowerCase();
+            team_name=item.getElementsByClassName("rb-team-name")[0].textContent.trim().toLowerCase();
+            if(member_name.includes(val) || status_name.includes(val) || status_team.includes(val) ){
                     item.style.display="block";
                     item.style.position="relative";
             }else{
@@ -39,6 +40,6 @@ jQuery( document ).ready( function($) {
     
     };
 
-    // search(document.getElementById('rbw_search_input'));
+    search(document.getElementById('rbw_search_input'));
 });
     
